@@ -12,5 +12,5 @@ import django
 django.setup()
 
 #* Passer les arguments de la ligne de commande à Daphne
-sys.argv = ["daphne", "-p", "8000", "project.asgi:application"]
+sys.argv = ["daphne", "-b", "0.0.0.0", "-p", "8000", "project.asgi:application"]
 CommandLineInterface.entrypoint()

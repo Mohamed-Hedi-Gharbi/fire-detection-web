@@ -12,7 +12,7 @@ class MQTTConsumer(AsyncWebsocketConsumer):
         await self.accept()
         self.client = mqtt.Client()
         self.client.on_message = self.on_message
-        self.client.username_pw_set("fire-detction-app@ttn", "NNSXS.DVAOEHXTPMPFFOT57RT76FBXLIGB6YIAQRB6JEY.7CDXFNCQ4AYSGSMBQU6PE3LXRIHGCRYWS3UK4745OZZWL6NJBCLA")
+        self.client.username_pw_set("lorae5app2@ttn", "NNSXS.L7OEOKQDAZLRWX3BC735IQGORWL2ZZJZ2HPIQWI.NSSEJCLZWB5WVI6YXZUBVGDUB5RQ2HCDL6W5HFDCO6A5UVGKGAEQ")
         self.client.tls_set()
         self.client.connect("eu1.cloud.thethings.network", 8883, 60)
         self.client.subscribe("#", 2)
@@ -99,7 +99,7 @@ class MQTTConsumer(AsyncWebsocketConsumer):
                     'detection': detection,
                     'rssi': rssi,
                     'wind_speed': wind,
-                    'fwi': fwi_value, 
+                    'fwi': fwi_value or "", 
                     'device_id': device_id
                 })
         else:
