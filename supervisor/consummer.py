@@ -47,7 +47,6 @@ class MQTTConsumer(AsyncWebsocketConsumer):
             humidity        = decoded_payload.get("humidity", "N/A")
             gaz             = decoded_payload.get("gaz", "N/A")
             pressure        = decoded_payload.get("pressur", "N/A")
-            detection       = decoded_payload.get("detection", "N/A")
             rssi            = parsed_json["uplink_message"]["rx_metadata"][0].get("rssi", "N/A")
             device_id       = parsed_json["end_device_ids"]["device_id"]
 
@@ -76,7 +75,6 @@ class MQTTConsumer(AsyncWebsocketConsumer):
                             humidity=humidity,
                             pressur=pressure,
                             gaz=gaz,
-                            detection=detection,
                             wind=wind,
                             ffmc=ffmc_value,
                             isi=isi_value,
@@ -96,7 +94,6 @@ class MQTTConsumer(AsyncWebsocketConsumer):
                     'humidity': humidity,
                     'gaz': gaz,
                     'pressure': pressure,
-                    'detection': detection,
                     'rssi': rssi,
                     'wind_speed': wind,
                     'fwi': fwi_value, 
