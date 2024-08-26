@@ -355,7 +355,7 @@
         document.getElementById('wind').innerText           = nodeData.wind_speed || 'N/A';
         document.getElementById('gas').innerText            = nodeData.gaz || 'N/A';
 
-        const socket = new WebSocket("ws://127.0.0.1:8000/ws/mqtt/");
+        const socket = new WebSocket("ws://195.35.24.22:8000/ws/mqtt/");
 
         socket.onmessage = function(event) {
             const data = JSON.parse(event.data);
