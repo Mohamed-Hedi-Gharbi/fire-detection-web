@@ -43,6 +43,8 @@ services:
       - db
     networks:
       - app-network
+    logging:
+      driver: "none"
 
 networks:
   app-network:
