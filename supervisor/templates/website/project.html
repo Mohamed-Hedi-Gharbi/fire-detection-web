@@ -537,9 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                     opacity: 1,
                                     fillOpacity: 0.5
                                 }).bindPopup(
-                                    `<b>Parcelle ID:</b> ${parcelle.id}<br>
-                                     <button class="edit-polygon" data-id="${parcelle.id}">Edit</button>
-                                     <button class="delete-polygon" data-id="${parcelle.id}">Delete</button>`
+                                    `<b>Parcelle ID:</b> ${parcelle.id}<br>`
                                 );
                                 polygon.feature = { properties: { id: parcelle.id } };
                                 polygon.addTo(map);
