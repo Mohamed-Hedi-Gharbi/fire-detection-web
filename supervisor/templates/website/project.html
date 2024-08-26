@@ -311,15 +311,12 @@
                 <div class="modal-dialog modal-dialog-centered modal-xl" style="height: 100%; max-height: none;">
                     <div class="modal-content" style="border: 2px solid #32CD32; border-radius: 10px; height: 100%; max-height: none;">
                         <div class="modal-header">
-                            <h4 class="modal-title text-success fw-bold" id="customParcelsNodesModalLabel">UPDATE NODE AND PARCELLE OF PROJECT:</h4>
+                            <h4 class="modal-title text-success fw-bold" id="customParcelsNodesModalLabel">GET NODE AND PARCELLE OF PROJECT:</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="closeCustomParcelsNodesButton"></button>
                         </div>
                         <div class="modal-body">
                             <div class="content-map-node mb-3" style="height: 90%;">
                                 <div id="customParcelsNodesMap" style="width: 100%; height: 100%;"></div>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-primary custom-gradient-button btn-lg" id="customParcelsNodesUpdateButton" style="padding: 2px 100px; border-radius: 20px; font-size: 25px;">Update</button>
                             </div>
                         </div>
                     </div>
@@ -563,8 +560,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         } else {
                             console.log("No parcels found for this project.");
                         }
-
-                        addDrawControls(map);
                     })
                     .catch(error => console.error('Error fetching parcels:', error));
 
