@@ -90,7 +90,7 @@ DATABASES = {
         'NAME': 'fire_detection',
         'USER': 'root',
         'PASSWORD': 'root',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
