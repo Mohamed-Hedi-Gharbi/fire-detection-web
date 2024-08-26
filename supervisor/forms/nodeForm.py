@@ -9,8 +9,11 @@ from django.core.exceptions import ValidationError
 
 class NodeForm(forms.ModelForm):
     NODE_REFERENCE_CHOICES = [
-        ('eui-70b3d57ed0066fcf', 'eui-70b3d57ed0066fcf'),
-        ('eui-a835411eb0084141', 'eui-a835411eb0084141'),
+        ('eui-70b3d57ed00690fd', 'eui-70b3d57ed00690fd'),
+        ('eui-70b3d57ed00690fc', 'eui-70b3d57ed00690fc'),
+        ('eui-70b3d57ed0069a34', 'eui-70b3d57ed0069a34'),
+        ('eui-70b3d57ed0068f79', 'eui-70b3d57ed0068f79'),
+        ('eui-70b3d57ed0069f0e', 'eui-70b3d57ed0069f0e'),
     ]
     reference = forms.ChoiceField(
         choices=[('', 'Select parcelle')] + NODE_REFERENCE_CHOICES,

@@ -99,7 +99,7 @@ class MQTTConsumer(AsyncWebsocketConsumer):
                     'detection': detection,
                     'rssi': rssi,
                     'wind_speed': wind,
-                    'fwi': fwi_value or "", 
+                    'fwi': fwi_value, 
                     'device_id': device_id
                 })
         else:
