@@ -137,7 +137,6 @@
                                                             data-project-client="{{ project.client }}">
                                                             <i class="fa fa-eye"></i>
                                                         </a>
-                                                        <a href="#" class="project-card-action btn btn-sm btn-warning" data-project-id="{{ project.pk }}"><i class="fa fa-edit"></i></a>
                                                         <a href="{% url 'supervisor:delete_project' project.pk %}" class="project-card-action btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this project?');"><i class="fa fa-trash"></i></a>
                                                         <a href="#" class="project-card-action btn btn-sm btn-info" id="showCustomParcelsNodesModal"
                                                             data-project-id="{{ project.pk }}" data-project-name="{{ project.name }}">
